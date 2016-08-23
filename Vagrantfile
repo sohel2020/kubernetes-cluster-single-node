@@ -32,9 +32,6 @@ Vagrant.configure("2") do |config|
     v.cpus = 1
     v.gui = false
     v.memory = NODE_MEMORY_SIZE
-
-    # On VirtualBox, we don't have guest additions or a functional vboxsf
-    # in CoreOS, so tell Vagrant that so it can be smarter.
     v.check_guest_additions = false
     v.functional_vboxsf     = false
   end
